@@ -1,0 +1,120 @@
+#current-weather {
+    background: none;
+    margin: 24px;
+    padding: 0;
+    display: flex;
+    font-size: 16px;
+    font-weight: 700;
+    width: fit-content;
+    margin-left: auto;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+}
+
+.current-img {
+    padding: 6px;
+    box-shadow: 0px -0px 3px rgba(0, 0, 0, .3);
+    border-radius: 8px;
+    background: #FCFCFC;
+    margin: 0 0 0 6px;
+    border: 0;
+    cursor: pointer;
+}
+
+.current-img:hover {background: #EBEBEB;}
+
+.current-img img {width: 64px;}
+
+#weather-aside {
+    position: fixed;
+    z-index: 999;
+    top: 50px;
+    bottom: 0;
+    width: 350px;
+    background: #FCFCFC;
+    box-shadow: 0px -0px 3px rgba(0, 0, 0, .3);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#weather-aside-top {
+    position: sticky;
+    top: 0;
+    height: 40px;
+    background: #D7263D;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+#close-weather-btn {
+    padding: 12px;
+    color: #FCFCFC;
+    font-size: 20px;
+    background: none;
+    cursor: pointer;
+    border: none;
+}
+
+#weather-aside-content {
+    box-sizing: border-box;
+    padding: 14px 24px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#weather-aside-content section h2 {
+    margin: 16px 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#weather-aside-content section figure {margin: 0;}
+
+#weather-aside-content section::after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #D7263D;
+    display: block;
+}
+
+#weather-aside-content section:last-child::after {
+    content: "";
+    width: 0;
+    height: 0px;
+}
+
+.hidden {display: none;}
+
+.visible {
+    display: block;
+
+    /* Animation */
+    animation-name: animateFromLeft;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    -webkit-animation-name: animateFromLeft;
+    -webkit-animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both
+}
+
+@keyframes animateFromLeft {
+    from {transform: translate3d(-700px,0,0);}
+
+    to {transform: translate3d(0,0,0);}
+}
+
+@-webkit-keyframes animateFromLeft {
+    from {transform: translate3d(-700px,0,0);}
+
+    to {transform: translate3d(0,0,0);}
+}
+
+
+@media only screen and (max-width: 700px) {
+    #weather-aside {
+        width: 100vw;
+    }
+}

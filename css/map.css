@@ -1,0 +1,207 @@
+#map {height: calc(100vh - 50px);}
+
+/* User location button */
+#user-location {
+    display: flex;
+    width: 36px;
+    height: 36px;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+    background-color: #FCFCFC;
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+    margin: 0 24px 24px 0;
+    font-size: 24px;
+    z-index: 999;
+    color: #D7263D;
+    border-radius: 8px;
+    box-shadow: 0px -0px 3px rgba(0, 0, 0, .3);
+}
+
+/* Leaflet contributor */
+.leaflet-control-attribution {margin: 0;}
+
+.leaflet-control-attribution a {color: #D7263D;}
+
+/* Leaflet + - button color */
+.leaflet-control-zoom a {
+    background: #FCFCFC;
+    color: #D7263D;
+    box-shadow: 0px -0px 3px rgba(0, 0, 0, .3);
+}
+
+.leaflet-touch .leaflet-bar a {
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+}
+
+.leaflet-control-zoom-in {border-radius: 8px 8px 0 0 !important;}
+
+.leaflet-control-zoom-out {border-radius: 0 0 8px 8px !important;}
+
+.leaflet-control-zoom {
+    margin-right: 24px !important;
+    margin-bottom: 24px !important;
+}
+
+.leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {border: 0px;}
+
+.leaflet-control-zoom a:hover, #user-location:hover {
+    background: #EBEBEB;
+    color: #111;
+}
+
+.leaflet-top, .leaflet-bottom {z-index: 999;}
+
+/* Custom map marker */
+.map-icon-fontawesome {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 16px;
+    color: #FCFCFC;
+    background: #D7263D;
+    border-radius: 50%;
+    box-shadow: 0px -0px 3px rgba(0, 0, 0, .3);
+}
+
+.map-icon-fontawesome::after {
+    position: absolute;
+    content: '';
+    bottom: -28px;
+    left: 3px;
+    border: 12px solid transparent;
+    border-top: 22px solid #D7263D;
+}
+
+.map-icon-fontawesome img {
+    height: 62%;
+    width: 65%;
+}
+
+/* User map icon */
+.map-user-icon-fontawesome {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 16px;
+    color: #D7263D;
+    background: #FCFCFC;
+    border-radius: 50%;
+    box-shadow: 0px -0px 3px rgba(0, 0, 0, .3);
+}
+
+/* Marker popup */
+.leaflet-popup-content {
+    font-family: 'Raleway', sans-serif;
+    max-width: 300px;
+    margin: 24px;
+    box-sizing: border-box;
+}
+
+.popup-title {
+    padding: 0;
+    height: auto;
+    font-weight: 700;
+    color: #111111;
+    color: #111111;
+    font-size: 16px;
+    margin: 0 0 16px 0;
+}
+
+.popup-content {
+    max-height: 250px;
+    padding-right: 16px;
+    margin-bottom: 18px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.popup-content p {
+    font-size: 12.80px;
+    color: #111111;
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 0 0 16px 0;
+}
+
+.popup-content p:last-child {margin: 0;}
+
+.popup-content figure {margin: 0;}
+
+.popup-content img {
+    width: 100%;
+    height: 100%;
+}
+
+.popup-content caption {
+    width: 100%;
+    text-align: left;
+}
+
+.popup-btn {
+    background: #D7263D;
+    color: #FCFCFC;
+    font-size: 12.80px;
+    font-weight: 500;
+    padding: 12px;
+    border-radius: 4px;
+    border: none;
+    font-family: 'Raleway', sans-serif;
+    cursor: pointer;
+}
+
+.popup-btn:hover {background: #111111;}
+
+.leaflet-popup-close-button {
+    font-size: 20px !important;
+    padding: 6px !important;
+}
+
+/* Route information div */
+#routeInfo{
+    background-color: #FCFCFC;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+    margin: 24px;
+    color: #111;
+}
+
+/* Spacing for route distance and time */
+#routeTime { margin-left: 35px; }
+
+#removeRoute {
+    display: flex;
+    justify-content: space-between;
+    background: #FCFCFC;
+    padding: 16px 16px 0 16px;
+    border-radius: 12px 12px 0 0;
+    max-width: 100%;
+    margin: 0;
+    font-size: 1rem;
+}
+
+#removeRoute i {cursor: pointer;}
+
+#routeNumbers {
+    margin: 0;
+    padding: 16px;
+}
+
+#routeNumbers i {color:#D7263D}
+
+/* Hide default routing container */
+.leaflet-routing-container {display: none;}
+
+.map-top-corner {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    z-index: 999;
+    max-width: 100%;
+}

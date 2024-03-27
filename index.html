@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luontomaps</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,500;0,700;1,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"/>
+    <link rel="stylesheet" type="text/css" href="css/leaflet-routing-machine.css"/>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/map.css">
+    <link rel="stylesheet" type="text/css" href="css/weather.css">
+    <script src="https://kit.fontawesome.com/3baf56f84c.js" crossorigin="anonymous"></script>
+<body>
+<header id="header">
+    <a class="logo-link" href="index.html"><h1>Luontomaps</h1></a>
+    <nav>
+        <ul>
+            <li class="nav-link active"><a href="index.html">Kartta</a></li>
+            <li class="nav-link"><a href="info.html">Info</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <div id="map"></div>
+    <button id="user-location">
+        <span id="user-location-icon"><i class="fa-solid fa-location-crosshairs"></i></span>
+    </button>
+    <div class="map-top-corner">
+        <div id="route-div"></div>
+        <a id="current-weather">
+            <span class="current_temp"></span>
+            <button class="current-img"></button>
+        </a>
+    </div>
+</main>
+<aside id="weather-aside" class="hidden">
+    <div id="weather-aside-top">
+        <button id="close-weather-btn"><i class="fa-solid fa-angle-left"></i></button>
+    </div>
+    <div id="weather-aside-content">
+        <section>
+            <h2>Tänään:</h2>
+            <figure class="c-img"></figure>
+            <p class="c-temp"></p>
+            <p class="c-mintemp">Alhaisin lämpötila: </p>
+            <p class="c-maxtemp">Korkein lämpötila: </p>
+            <p class="c-rain">Sateen todennäköisyys: </p>
+            <p class="c-cond">Sääolosuhteet: </p>
+        </section>
+        <section>
+            <h2>Huominen:</h2>
+            <figure class="d1-img"></figure>
+            <p class="d1-mintemp">Alhaisin lämpötila: </p>
+            <p class="d1-maxtemp">Korkein lämpötila: </p>
+            <p class="d1-rain">Sateen todennäköisyys: </p>
+            <p class="d1-cond">Sääolosuhteet: </p>
+        </section>
+        <section>
+            <h2>Ylihuominen:</h2>
+            <figure class="d2-img"></figure>
+            <p class="d2-mintemp">Alhaisin lämpötila: </p>
+            <p class="d2-maxtemp">Korkein lämpötila: </p>
+            <p class="d2-rain">Sateen todennäköisyys: </p>
+            <p class="d2-cond">Sääolosuhteet: </p>
+        </section>
+    </div>
+</aside>
+<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"></script>
+<script src="js/leaflet-routing-machine.js"></script>
+<script src="js/keys.js"></script>
+<script src="js/map.js"></script>
+<script src="js/routing.js"></script>
+<script src="js/map-markers.js"></script>
+<script src="js/user-geolocation.js"></script>
+<script src="js/weather.js"></script>
+</body>
+</html>
